@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace tund
+namespace tundvol1
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world!");
+            Console.ReadLine();
+
+            Start:
             string name;
             int cpuNumber;
-            
             int tries = 0;
             bool gameOver = false;
 
@@ -24,13 +27,13 @@ namespace tund
             Console.WriteLine($"Hello, {name}.");
 
             //gameOver= NOT gameOver =true
-            while(!gameOver)
+            while (!gameOver)
             {
                 int userNumber;
                 Console.WriteLine("Game has started. Try to guess the numbers:");
                 userNumber = int.Parse(Console.ReadLine());
 
-                if(userNumber > cpuNumber)
+                if (userNumber > cpuNumber)
                 {
                     Console.WriteLine("CPU number is smaller");
                 }
@@ -40,8 +43,18 @@ namespace tund
                 }
                 else
                 {
-                    Console.WriteLine("Got me!");
-                    gameOver = true;
+                    Console.WriteLine("Got me! Play again? Y/N");
+                    string userAnswer = Console.ReadLine();
+                  //ToUpper() or ToLower()
+                    if(userAnswer.ToUpper() == "Y")
+                    {
+                        goto Start;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Game over!");
+                        gameOver = true;
+                    }
                 }
             }
 
