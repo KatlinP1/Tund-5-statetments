@@ -71,23 +71,64 @@ namespace taskid
             Console.ReadLine();*/
 
             //Task4- users input is vowel or smt else
+            /*var vowels = "aeiou";
             Console.WriteLine("Hello! Insert any letter you like.");
-            string userLetter;
 
             Console.WriteLine("Enter any letter you like:");
-            userLetter = Console.ReadLine();
+            var userLetter = Console.ReadLine();
 
-            if (userLetter) 
+            if (vowels.IndexOf (userLetter)!=-1) 
             {
-                Console.WriteLine("Letter is s vowel");
+                Console.WriteLine("Letter is vowel");
             }
             else
             {
                 Console.WriteLine("Letter is not a vowel");
             }
 
-            Console.ReadLine();
+            Console.ReadLine(); */
+            
+            //Task5- asks user input a number (1-7) and print the corresponding day of week (monday- sunday)
+        
+            Console.WriteLine("Tere! Sisesta mingi number.");
+            int userNumber; 
+            
+            Console.WriteLine("Sisesta number:");
+            userNumber = int.Parse(Console.ReadLine());
+
+            switch (userNumber)
+            {
+                case 1:
+                    Console.WriteLine("Esmaspäev");
+                    break;
+                case 2:
+                    Console.WriteLine("Teisipäev");
+                    break;
+                case 3: 
+                    Console.WriteLine("Kolmapäev");
+                    break;
+                case 4:
+                    Console.WriteLine("Neljapäev");
+                    break;
+                case 5:
+                    Console.WriteLine("Reede");
+                    break;
+                case 6: 
+                    Console.WriteLine("Laupäev");
+                    break;
+                case 7: 
+                    Console.WriteLine("Pühapäev");
+                    break;
+                default:
+                    Console.WriteLine("Pole õige number");
+                    break;
+                    
+            }
+
+            Console.ReadKey();
         }
-        //Task5- asks user input a number (1-7) and print the corresponding day of week (monday- sunday)
+        
+        
+        
     }
 }
